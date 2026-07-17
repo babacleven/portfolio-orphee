@@ -8,7 +8,3 @@ Desktop.ini
 # Editor
 .vscode/
 .idea/
-
-# JS (handled locally)
-script.js
-*.js.map
