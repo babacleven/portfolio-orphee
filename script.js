@@ -330,6 +330,31 @@ setTimeout(typewrite, 2400);
   });
 })();
 
+/* MOBILE MENU */
+(function () {
+  var openBtn = document.getElementById("mobile-menu-open");
+  var closeBtn = document.getElementById("mobile-menu-close");
+  var menu = document.getElementById("mobile-menu");
+  var links = menu.querySelectorAll(".mobile-nav-link, .mobile-nav-cta");
+
+  openBtn.addEventListener("click", function () {
+    menu.classList.add("open");
+    document.body.style.overflow = "hidden";
+  });
+
+  closeBtn.addEventListener("click", function () {
+    menu.classList.remove("open");
+    document.body.style.overflow = "";
+  });
+
+  links.forEach(function (link) {
+    link.addEventListener("click", function () {
+      menu.classList.remove("open");
+      document.body.style.overflow = "";
+    });
+  });
+})();
+
 /* NEWSLETTER FORM */
 (function () {
   var form = document.getElementById("newsletter-form");
